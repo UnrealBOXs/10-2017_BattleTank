@@ -1,11 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "BattleTank.h"
-#include "MyTank.h"
+#include "Tank.h"
 
 
 // Sets default values
-AMyTank::AMyTank()
+ATank::ATank()
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -13,21 +13,21 @@ AMyTank::AMyTank()
 }
 
 // Called when the game starts or when spawned
-void AMyTank::BeginPlay()
+void ATank::BeginPlay()
 {
 	Super::BeginPlay();
 	
 }
 
 // Called every frame
-void AMyTank::Tick( float DeltaTime )
+void ATank::Tick( float DeltaTime )
 {
 	Super::Tick( DeltaTime );
 
 }
 
 // Called to bind functionality to input
-void AMyTank::SetupPlayerInputComponent(class UInputComponent* InputComponent)
+void ATank::SetupPlayerInputComponent(class UInputComponent* InputComponent)
 {
 	Super::SetupPlayerInputComponent(InputComponent);
 

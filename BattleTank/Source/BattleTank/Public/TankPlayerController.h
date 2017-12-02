@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "MyTank.h"
+#include "Tank.h"
 #include "GameFramework/PlayerController.h"
 #include "TankPlayerController.generated.h"
 
@@ -15,9 +15,11 @@ class BATTLETANK_API ATankPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 public:
-	AMyTank* GetControlledTank() const;
-
-	
-	
-	
+	ATank* GetControlledTank() const;
+	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaTime) override;
+	//Start the tank movinf the barrel so that a shoy would it where 
+	// the crosshair intersects the world
+	virtual void AimTowardsCrosshair();
+			
 };
