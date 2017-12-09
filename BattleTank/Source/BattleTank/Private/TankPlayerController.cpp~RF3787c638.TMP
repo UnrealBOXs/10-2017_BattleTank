@@ -46,6 +46,6 @@ void ATankPlayerController::AimTowardsCrosshair() {
 }
 //Get world location if linetrace theough crosshair  
 bool ATankPlayerController::GetsightRayhitLocation(FVector& OutHitLocation) const {
-	OutHitLocation = FVector(1.0);
-		return true;
+	FVector HitLocation;	 
+		return false;
 }
